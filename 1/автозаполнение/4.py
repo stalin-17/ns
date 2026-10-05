@@ -1,3 +1,9 @@
 import torch
 
-t1=torch.
+t1=torch.rand(21,dtype=torch.float32)
+t2=torch.randint(-5,6,(3,5), dtype=torch.int16)
+t3=torch.randn(64,128,dtype=torch.float64)
+
+print(t1)
+print(t2)
+print(t3)
