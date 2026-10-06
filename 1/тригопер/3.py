@@ -1,0 +1,10 @@
+import torch
+
+a, b, n = map(float, input().split()) # переменные a, b, n в программе не менять
+
+t_range=torch.linspace(a,b,int(n))
+t_out=1/(1+torch.exp(-t_range))
+t_pred=torch.argmax(t_out).item()
+print(t_range)
+print(t_out)
+print(t_pred)

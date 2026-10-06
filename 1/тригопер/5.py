@@ -1,0 +1,10 @@
+import torch
+# переменные lst и t_salaries в программе не менять
+lst = list(map(int, input().split()))
+t_salaries = torch.tensor(lst, dtype=torch.int32)
+
+t_median=t_salaries.median()
+t_mean=t_salaries.float().mean()
+t_std=t_salaries.float().std()
+t_low=t_salaries[t_salaries<t_median]
+t_hi=t_salaries[t_salaries>t_median]
